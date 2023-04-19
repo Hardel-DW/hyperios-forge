@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "HHH",
+        "HHH",
+        "HHH"
+    ],
+    "key": {
+        "H": {
+            "item": "hyperios:dragonite_ingot"
+        }
+    },
+    "result": {
+        "item": "hyperios:dragonite_block",
+        "count": 1
+    }
+}

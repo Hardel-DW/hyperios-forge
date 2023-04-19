@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L#",
+        "OEO",
+        "#A#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:experience_bottle"
+        },
+        "E": {
+            "item": "hyperios:mythril"
+        },
+        "O": {
+            "item": "minecraft:diamond"
+        },
+        "A": {
+            "item": "minecraft:amethyst_shard"
+        },
+        "L": {
+            "item": "hyperios:echo_clock"
+        }
+    },
+    "result": {
+        "item": "hyperios:timeless_mythril",
+        "count": 1
+    }
+}
