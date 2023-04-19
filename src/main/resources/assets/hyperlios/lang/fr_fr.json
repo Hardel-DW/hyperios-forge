@@ -1,0 +1,14 @@
+{
+    "itemGroup.hyperios.hyperios_blocks": "Blocs de hyperios",
+    "itemGroup.hyperios.hyperios_items": "Items de hyperios",
+    "item.hyperios.eden_eternal": "Eden Eternal",
+    "item.hyperios.unpowered_eden_eternal": "Eden Eternal non alimenté",
+    "item.hyperios.mythril": "Mythril",
+    "item.hyperios.echo_clock": "Horloge d'écho",
+    "item.hyperios.dragonite_ingot": "Lingot de dragonite",
+    "item.hyperios.raw_dragonite": "Dragonite brut",
+    "block.hyperios.dragonite_ore": "Minerai de dragonite",
+    "block.hyperios.deepslate_dragonite_ore": "Minerai de dragonite en profondeur",
+    "block.hyperios.dragonite_block": "Bloc de dragonite",
+    "block.hyperios.mythril_block": "Bloc de mythril"
+}

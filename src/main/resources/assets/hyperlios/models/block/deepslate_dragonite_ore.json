@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "hyperios:block/deepslate_dragonite_ore"
+    }
+}
