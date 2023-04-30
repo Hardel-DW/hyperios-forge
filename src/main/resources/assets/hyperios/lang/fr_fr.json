@@ -10,5 +10,7 @@
     "block.hyperios.dragonite_ore": "Minerai de dragonite",
     "block.hyperios.deepslate_dragonite_ore": "Minerai de dragonite en profondeur",
     "block.hyperios.dragonite_block": "Bloc de dragonite",
-    "block.hyperios.mythril_block": "Bloc de mythril"
+    "block.hyperios.mythril_block": "Bloc de mythril",
+    "block.hyperios.timeless_mythril_block": "Bloc de mythril intemporel",
+    "block.hyperios.mythril_condenser": "Condenseur de mythril"
 }

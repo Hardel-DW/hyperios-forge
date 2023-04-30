@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "hyperios:block/mythril_condenser"
+        }
+    }
+}

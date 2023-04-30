@@ -1,5 +1,8 @@
 {
     "replace": false,
     "values": [
+        "hyperios:dragonite_ore",
+        "hyperios:deepslate_dragonite_ore",
+        "hyperios:dragonite_block"
     ]
 }

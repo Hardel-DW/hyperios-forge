@@ -7,9 +7,11 @@
     "item.hyperios.dragonite_ingot": "Dragonite Ingot",
     "item.hyperios.raw_dragonite": "Raw Dragonite",
     "block.hyperios.mythril_block": "Mythril Block",
+    "block.hyperios.timeless_mythril_block": "Timeless Mythril Block",
+    "block.hyperios.mythril_condenser": "Mythril Condenser",
     "block.hyperios.dragonite_ore": "Dragonite Ore",
     "block.hyperios.deepslate_dragonite_ore": "Deepslate Dragonite Ore",
     "block.hyperios.dragonite_block": "Dragonite Block",
-    "itemGroup.hyperios.hyperios_blocks": "hyperios Blocks",
-    "itemGroup.hyperios.hyperios_items": "hyperios Items"
+    "itemGroup.hyperios.hyperios_blocks": "Hyperios Blocks",
+    "itemGroup.hyperios.hyperios_items": "Hyperios Items"
 }

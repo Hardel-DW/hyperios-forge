@@ -2,11 +2,11 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "minecraft:dragonite_block"
+            "item": "hyperios:dragonite_block"
         }
     ],
     "result": {
-        "item": "minecraft:dragonite_ingot",
+        "item": "hyperios:dragonite_ingot",
         "count": 1
     }
 }

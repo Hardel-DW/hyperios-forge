@@ -1,0 +1,21 @@
+{
+    "name": "Damage Area",
+    "description": "A map with a large area of damage.",
+    "action": [
+        {
+            "type": "damage",
+            "damage": 100,
+            "radius": 10,
+            "center": [
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "trigger": [
+        {
+            "type": "use"
+        }
+    ]
+}
