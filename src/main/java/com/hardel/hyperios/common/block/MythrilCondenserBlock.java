@@ -16,43 +16,44 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class MythrilCondenserBlock extends BaseEntityBlock {
 
-    protected MythrilCondenserBlock(Properties properties) {
+    public MythrilCondenserBlock(Properties properties) {
         super(properties);
     }
 
     @Override
-    public RenderShape getRenderShape(BlockState blockState) {
+    public @NotNull RenderShape getRenderShape(@NotNull BlockState blockState) {
         return RenderShape.MODEL;
     }
 
     @Nullable
     @Override
-    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
         return new MythrilCondenserBlockEntity(blockPos, blockState);
     }
 
     @Override
-    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+    public void onRemove(BlockState pState, @NotNull Level level, @NotNull BlockPos pos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
-            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            BlockEntity blockEntity = level.getBlockEntity(pos);
             if (blockEntity instanceof MythrilCondenserBlockEntity) {
                 ((MythrilCondenserBlockEntity) blockEntity).drops();
             }
         }
 
-        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+        super.onRemove(pState, level, pos, pNewState, pIsMoving);
     }
 
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public @NotNull InteractionResult use(@NotNull BlockState state, Level pLevel, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         if (!pLevel.isClientSide()) {
-            BlockEntity entity = pLevel.getBlockEntity(pPos);
+            BlockEntity entity = pLevel.getBlockEntity(pos);
             if (entity instanceof MythrilCondenserBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer) pPlayer), (MythrilCondenserBlockEntity) entity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer) player), (MythrilCondenserBlockEntity) entity, pos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -63,8 +64,8 @@ public class MythrilCondenserBlock extends BaseEntityBlock {
 
     @Nullable
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
-                                                                  BlockEntityType<T> type) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state,
+                                                                  @NotNull BlockEntityType<T> type) {
         return createTickerHelper(type, BlockEntityRegistry.MYTHRIL_CONDENSER.get(),
                 MythrilCondenserBlockEntity::tick);
     }

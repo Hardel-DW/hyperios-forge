@@ -13,5 +13,7 @@
     "block.hyperios.deepslate_dragonite_ore": "Deepslate Dragonite Ore",
     "block.hyperios.dragonite_block": "Dragonite Block",
     "itemGroup.hyperios.hyperios_blocks": "Hyperios Blocks",
-    "itemGroup.hyperios.hyperios_items": "Hyperios Items"
+    "itemGroup.hyperios.hyperios_items": "Hyperios Items",
+    "jei.hyperios.mythril_condenser": "Mythril Condenser",
+    "container.hyperios.mythril_condenser": "Mythril Condenser"
 }

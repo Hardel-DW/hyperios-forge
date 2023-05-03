@@ -1,10 +1,9 @@
 package com.hardel.hyperios;
 
-import com.hardel.hyperios.setup.BlockEntityRegistry;
-import com.hardel.hyperios.setup.BlockRegistry;
-import com.hardel.hyperios.setup.ItemsRegistry;
+import com.hardel.hyperios.client.screen.MythrilCondenserScreen;
+import com.hardel.hyperios.setup.*;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -23,7 +22,7 @@ import static com.hardel.hyperios.setup.CreativeTabRegistry.HYPERLIOS_ITEMS;
 @Mod(HyperiosMod.MODID)
 public class HyperiosMod {
     public static final String MODID = "hyperios";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public HyperiosMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -32,6 +31,8 @@ public class HyperiosMod {
         ItemsRegistry.register(modEventBus);
         BlockRegistry.register(modEventBus);
         BlockEntityRegistry.register(modEventBus);
+        MenuTypeRegister.register(modEventBus);
+        RecipeRegister.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         MinecraftForge.EVENT_BUS.register(this);
@@ -54,6 +55,7 @@ public class HyperiosMod {
             event.accept(BlockRegistry.DRAGONITE_ORE);
             event.accept(BlockRegistry.DEEPSLATE_DRAGONITE_ORE);
             event.accept(BlockRegistry.DRAGONITE_BLOCK);
+            event.accept(BlockRegistry.MYTHRIL_CONDENSER_BLOCK);
         }
     }
 
@@ -70,8 +72,7 @@ public class HyperiosMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            MenuScreens.register(MenuTypeRegister.MYTHRIL_CONDENSER_MENU.get(), MythrilCondenserScreen::new);
         }
     }
 }

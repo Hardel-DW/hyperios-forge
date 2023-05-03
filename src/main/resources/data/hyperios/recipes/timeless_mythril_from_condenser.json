@@ -1,0 +1,23 @@
+{
+    "type": "hyperios:mythril_condenser",
+    "ingredients": [
+        {
+            "item": "hyperios:mythril"
+        },
+        {
+            "item": "hyperios:mythril"
+        },
+        {
+            "item": "hyperios:mythril"
+        },
+        {
+            "item": "hyperios:mythril"
+        },
+        {
+            "item": "hyperios:mythril"
+        }
+    ],
+    "result": {
+        "item": "hyperios:timeless_mythril"
+    }
+}

@@ -1,6 +1,7 @@
 package com.hardel.hyperios.setup;
 
 import com.hardel.hyperios.HyperiosMod;
+import com.hardel.hyperios.common.block.MythrilCondenserBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -27,9 +28,8 @@ public class BlockRegistry {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.5F, 3.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DRAGONITE_BLOCK = registerBlock("dragonite_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F, 6.0F).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> MYTHRIL_CONDENSER_BLOCK = registerBlock("mythril_condenser",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F, 6.0F).requiresCorrectToolForDrops()));
+            () -> new MythrilCondenserBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F, 6.0F).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

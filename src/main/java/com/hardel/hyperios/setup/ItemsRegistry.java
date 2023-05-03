@@ -18,6 +18,7 @@ public class ItemsRegistry {
     public static final RegistryObject<Item> RAW_DRAGONITE = ITEMS.register("raw_dragonite", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DRAGONITE_INGOT = ITEMS.register("dragonite_ingot", () -> new Item(new Item.Properties()));
 
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
